@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.1",
-    "axios": "1.7.x",
+    "axios": "^1.21.0",
     "echarts": "5.5.x",
     "echarts-for-react": "^3.0.6",
     "framer-motion": "^11.18.2",

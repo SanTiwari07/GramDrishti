@@ -18,7 +18,7 @@ const extractErrorMessage = async (blob: Blob, fallback: string): Promise<string
 const downloadFile = async (url: string, filename: string, expectedType?: string): Promise<void> => {
   try {
     const response = await axios.get(url, { responseType: 'blob' });
-    const contentType = response.headers['content-type'] || '';
+    const contentType = String(response.headers['content-type'] ?? '');
 
     if (expectedType && !contentType.includes(expectedType)) {
       const errorMsg = await extractErrorMessage(response.data, 'Unexpected response format received from server.');
