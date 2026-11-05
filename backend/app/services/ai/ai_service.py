@@ -125,7 +125,6 @@ class AIService:
         yield json.dumps({"status": "llm"}) + "\n"
         
         # 5. Assemble Explainable Prompt
-        from app.services.ai.prompt_builder import assemble_dynamic_prompt
         system_context = assemble_dynamic_prompt(
             intents=intents,
             structured_json=structured_json, 
